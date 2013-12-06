@@ -1,0 +1,26 @@
+<div class="top">
+	<nav class="topMain">
+		<ul class="nav">
+			<li class="navUserLi">
+				{:is_login() ? get_account() : "<a href=" . U('Account/Index/index') . ">我的账户</a>"}
+			</li>
+			<li>
+				<a href="{:U('Home/Info/about')}">咨询服务</a>
+			</li>
+			<li>
+				<a href="{:U('Home/Borrow/index')}">我要贷款</a>
+			</li>
+			<li>
+				<a href="{:U('Home/Tender/running')}">我要投资</a>
+			</li>
+			<li>
+				<a href="{:U('Home/Index/index')}">首　页</a>
+			</li>
+		</ul>
+		<div class="topContact">
+			0737-3299111<br>
+        	331051622 官群
+		</div>
+		<a href=""><img src="__IMG__/logo.jpg" alt="华耀资本" name="华耀资本"></a>
+	</nav>
+</div>

@@ -1,0 +1,105 @@
+<extend name="Base:account" />
+
+<block name="content">
+	<!--右边信息显示部分-->
+		<div class="userRight">
+	<!--顶部信息部分-->
+	<div id="userInfoMain" class="userMenuTarget">
+			<div class="userAmountBox">
+	        <p class="userAmountTitle">账户总额：</p>
+	        <p class="userAmountNum">{$user.total_money} 元</p>
+				<div class="userAmountInfoBox">
+				    <span class="userAmountInfoTriangleBorder"></span>
+					<span class="userAmountInfoTriangle"></span>
+	          	<p>{$user.use_money} 元 可用</p>
+	          	<p>{$user.frozen_money} 元 冻结</p>
+	          	<p>{$user.retake_money} 元 待收</p>
+	          	<p>{$user.use_credit} 元 可用信用额度</p>
+	          	<p>{$user.frozen_credit} 元 冻结信用额度</p>
+					</div>
+			</div>
+			<div class="userManageBox">
+			<input class="btnAmountRecharge" value="充值" onclick="location.href='/accounts/finance/recharge/add/'" type="button">
+			<input class="btnAmountPut" value="提现" onclick="location.href='/accounts/finance/withdraw/add/'" type="button">
+			<p>登录帐号：<span>{$_SESSION['hyzb_home']['user_auth']['username']}</span></p>
+	        <p>消息中心：<a href="social/inbox/">共 <span>0</span> 条未读</a></p>
+	        <p>用户邮箱：<span>{$_SESSION['hyzb_home']['user_auth']['email']}</span></p>
+	        <p>上次登录：<span>{$user['last_login_time']|date='Y-m-d H:i:s', ###}</span></p>
+			<p>
+				<span class="email_open needShowFullInfo" data-full="邮箱认证用户"></span>
+		        <a href="realname_attestant/"><span class="realname_open needShowFullInfo" data-full="实名认证通过"></span></a>
+					<a href="phone_attestant/"><span class="phone_close needShowFullInfo" data-full="未手机认证"></span></a>
+		        <span class="scene_close needShowFullInfo" data-full="未现场认证"></span>
+		        <span class="video_close needShowFullInfo" data-full="未视频认证"></span>
+		        <span class="vip_open needShowFullInfo" data-full="VIP用户"></span>
+	        </p>
+				 <!-- <p>登录IP：<a href="javscript:;"><span>11.22.33.44</sdaffd f> 内蒙古 呼和浩特</a></p> -->
+			</div>
+			<div class="userQuickWay">
+		    <p class="userQuickTitle">快捷通道：</p>
+		    <a href="finance/operation/">资金明细</a>|
+		    <a href="finance/recharge/add/">账户充值</a>|
+		    <a href="finance/withdraw/add/">账户提现</a><br>
+		    <a href="password_change/">密码修改</a>|
+		    <a href="profile_change/">资料修改</a><br>
+		    <a href="borrow/investment/">投标列表</a>|
+		    <a href="borrow/borrow/">发标列表</a><br>
+		    <a href="social/message/add/">发送邮件</a>|
+		    <a href="social/inbox/">查询邮件</a><br>
+		    <a href="phone_attestant/">手机认证</a>|
+		    <a href="realname_attestant/">实名认证</a><br>
+		    <a href="bank/bankcard/">银行卡管理</a>
+    	</div>
+	</div>
+
+	<!--最近待收款部分-->
+    <div class="userDetailTypeName">
+      最近待收情况
+    </div>
+    <table class="tableUserMarkList" cellspacing="0">
+      	<tbody>
+      		<tr>
+	        	<th width="200">标题</th>
+		        <th>应收日期</th>
+		        <th>本金</th>
+		        <th>利息</th>
+		        <th>年利率</th>
+		        <th>期限</th>
+	      	</tr>
+
+	      	<tr>
+		        <td colspan="6">
+		          <div class="userBackNoRec">
+		            暂无待收记录
+		          </div>
+		        </td>
+	      	</tr>
+    	</tbody>
+    </table>
+
+    <!--最近待还款部分-->
+    <div class="userDetailTypeName">
+      最近待还情况
+    </div>
+    <table class="tableUserMarkList" cellspacing="0">
+      	<tbody>
+      		<tr>
+		        <th width="200">标题</th>
+		        <th>还款本金</th>
+		        <th>还款利息</th>
+		        <th>还款时间</th>
+		        <th>年利率</th>
+		        <th>期限</th>
+      		</tr>
+
+      		<tr>
+		        <td colspan="6">
+		          <div class="userBackNoRec">
+		            暂无还款记录
+		          </div>
+		        </td>
+      		</tr>
+    	</tbody>
+    </table>
+	</div>
+</block>

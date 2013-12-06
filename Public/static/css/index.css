@@ -1,0 +1,166 @@
+@charset "UTF-8";
+.left {
+	float: left;
+	width: 705px;
+	height: auto;
+}
+/* 轮播图和登陆部分 */
+#bannerLogin {
+	position: relative;
+	width: 980px;
+	height: 315px;
+	margin-top: -6px;
+  overflow: auto;
+}
+#bannerLogin ul li {
+  width: 980px;
+  height: 315px;
+  float: left;
+}
+#bannerLogin .dots {
+  position: absolute;
+  width: 300px;
+  height: 8px;
+  bottom: 12px;
+  left: 25%;
+}
+#bannerLogin .dot {
+  display: block;
+  width: 30px;
+  height: 8px;
+  font-size: 1px;
+  line-height: 1px;
+  margin-left: 10px;
+  opacity: 0.7;
+  float: left;
+  cursor: pointer;
+  background-color: #FFF;
+}
+#bannerLogin .dot:hover {
+  opacity: 1;
+}
+#bannerLogin .dot.active {
+  opacity: 1;
+  background-color: #09F;
+}
+/* 首页登陆表单 */
+.indexLoginBox {
+	position: relative;
+	position: absolute;
+	top: 50px;
+	right: 16px;
+	z-index: 10;
+	width: 245px;
+	height: auto;
+}
+.loginBlack {
+	width: 245px;
+	height: 222px;
+	background-color: #000;
+	opacity: 0.5;
+	filter:alpha(opacity=50);
+}
+.loginMain {
+	position: absolute;
+	top: 0px;
+	left: 0px;
+	z-index: 5;
+	width: 215px;
+	height: auto;
+	padding: 10px 15px;
+}
+.loginBoxTitle {
+	font-size: 13px;
+	line-height: 26px;
+	color: #FFF;
+	padding-left: 3px;
+	border-bottom: 1px solid #FFF;
+}
+.loginTable {
+	margin-left: 14px;
+}
+.loginTable label {
+	position: relative;
+	font-size: 13px;
+	font-weight: normal;
+}
+.loginTable label span {
+	display: block;
+	line-height: 14px;
+	font-size: 14px;
+	position: absolute;
+	top: 50%;
+	left: 8px;
+	margin-top: -7px;
+	color: #999;
+}
+.textInput {
+	width: 172px;
+	height: 28px;
+	margin-top: 10px;
+	padding: 2px 5px 0;
+	font-size: 14px;
+	line-height: 28px;
+	color: #333;
+	border: 0;
+}
+.loginTable .labelCheckBox {
+	font-size: 12px;
+	color: #EEE;
+	line-height: 40px;
+}
+.labelCheckBox input[name=remember] {
+	margin-right: 2px;
+}
+.indexLoginForget, .indexLoginForget:visited {
+	font-size: 12px;
+	text-align: right;
+	color: #ffc286;
+}
+.indexLoginForget:hover,.indexLoginForget:focus {
+	color:#EEE;
+}
+.btnSub {
+	display: inline;
+	margin-top: 4px;
+	padding: 8px 18px;
+	color: #FFF;
+	background-color: #428bca;
+	border: #357ebd;
+	cursor: pointer;
+	line-height: 14px;
+	font-size: 14px;
+}
+/* 右侧公告和动态 */
+.right {
+	width: 260px;
+	height: auto;
+	display: inline;
+	float: left;
+	margin-left: 15px;
+}
+.rightInfoList {
+	list-style: none outside line;
+	width: 238px;
+	height: 177px;
+	margin-bottom: 12px;
+	padding: 5px 10px;
+	background-color: #FFF;
+	border: 1px solid #DDD;
+	border-top: 0;
+}
+.rightInfoList li {
+	line-height: 26px;
+	border-bottom: 1px dashed #CCC;
+}
+.rightInfoList li a {
+	white-space: nowrap;
+	color: #666;
+	font-size: 12px;
+	padding-left: 10px;
+	text-decoration: none;
+}
+.rightInfoList li a:hover {
+	color: #0292ef;
+	background-color: #FAFAFA;
+}

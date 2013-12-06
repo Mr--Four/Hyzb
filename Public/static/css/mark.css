@@ -1,0 +1,332 @@
+@charset "utf-8";
+/* 首页和投资页的标详情部分*/
+.middleTitle {
+	width: 100%;
+	height: 35px;
+	border-bottom: 2px solid #8CCDFF;
+}
+.middleTitle .more {
+	float: right;
+	font-size: 12px;
+	color: #999;
+	margin: 15px 10px 0 0 ;
+	text-decoration: none;
+}
+.middleTitle .more:hover {
+	color: #09F;
+}
+.middleTitleBox {
+	position: relative;
+	display: inline-block;
+	height: 35px;
+	line-height: 32px;
+	font-size: 14px;
+	color: #FFF;
+	padding: 0 18px;
+	background-color: #0292EF;
+}
+.selectMiddleTitle {
+	background-color: #FFF;
+	color: #666;
+	cursor: pointer;
+}
+.titleTriangle {
+	position: absolute;
+	top: 100%;
+	left: 50%;
+	width: 0;
+	height: 0;
+	z-index: 3;
+	display: block;
+	font-size: 1px;
+	line-height: 1px;
+	margin-left: -7px;
+	margin-top: -5px;
+	border-left: 7px solid rgba(0, 0, 0, 0);
+	border-right: 7px solid rgba(0, 0, 0, 0);
+	border-bottom: 7px solid #FFF;
+}
+.titleTriangleBorder {
+	position: absolute;
+	top: 100%;
+	left: 50%;
+	width: 0;
+	height: 0;
+	z-index: 2;
+	display: block;
+	font-size: 1px;
+	line-height: 1px;
+	margin-top: -8px;
+	margin-left: -10px;
+	border-left: 10px solid transparent;
+	border-right: 10px solid transparent;
+	border-bottom: 10px solid #8CCDFF;
+}
+.markList {
+	width: 980px;
+	height: auto;
+}
+#indexMarkList {
+	width: 705px;
+}
+.markList li {
+	position: relative;
+	width: 100%;
+	height: 105px;
+	display: block;
+	float: left;
+	clear: both;
+	background: #f3f3f2; /* Old browsers */
+	background: -moz-linear-gradient(top, #f3f3f2, #ececea); /* FF3.6+ */
+	background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#f3f3f2), color-stop(100%,#ececea)); /* Chrome,Safari4+ */
+	background: -webkit-linear-gradient(top, #f3f3f2,#ececea); /* Chrome10+,Safari5.1+ */
+	background: -o-linear-gradient(top, #f3f3f2,#ececea); /* Opera11.10+ */
+	background: -ms-linear-gradient(top, #f3f3f2,#ececea); /* IE10+ */
+	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#f3f3f2', endColorstr='#ececea',GradientType=0 ); /* IE6-9 */
+	background: linear-gradient(top, #f3f3f2,#ececea); /* W3C */
+}
+.markListPercent {
+	height: 105px;
+	margin: 0;
+	background: #c5e6f7; /* Old browsers */
+	background: -moz-linear-gradient(top, #c5e6f7, #aed9f2); /* FF3.6+ */
+	background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#c5e6f7), color-stop(100%,#aed9f2)); /* Chrome,Safari4+ */
+	background: -webkit-linear-gradient(top, #c5e6f7,#aed9f2); /* Chrome10+,Safari5.1+ */
+	background: -o-linear-gradient(top, #c5e6f7,#aed9f2); /* Opera11.10+ */
+	background: -ms-linear-gradient(top, #c5e6f7,#aed9f2); /* IE10+ */
+	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#c5e6f7', endColorstr='#aed9f2',GradientType=0 ); /* IE6-9 */
+	background: linear-gradient(top, #c5e6f7,#aed9f2); /* W3C */
+}
+.tableMarkList {
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	z-index: 3;
+}
+.tableMarkList td {
+	font-size: 12px;
+	color: #666;
+	padding-top: 10px;
+}
+.markListImg {
+	text-align: center;
+	width: 100px;
+}
+.markListImg img {
+	width: 71px;
+	height: 71px;
+	cursor: pointer;
+	padding: 3px;
+	background-color: #FDFDFD;
+	border: 1px solid #CCC;
+}
+.markListName {
+	color: #F60;
+	font-size: 14px;
+	font-weight: bold;
+	line-height: 25px;
+	text-decoration: none;
+}
+.markListName:hover {
+	text-decoration: underline;
+}
+.iconMarkList {
+	width: 13px;
+	height: 13px;
+	cursor: pointer;
+	display: inline-block;
+	margin: 0 3px;
+}
+.btnTenderList {
+	width: 85px;
+	height: 35px;
+	cursor: pointer;
+	border: 0px none;
+	background: url('../../Home/images/btnListTender.gif') repeat scroll 0px 0px transparent;
+}
+.btnTenderList:hover {
+	background-position: 0px 35px;
+}
+.btnTenderFull {
+	background-image: url('../../Home/images/btnListFullTender.gif');
+}
+.btnTenderFull:hover {
+	cursor: not-allowed;
+	opacity: 1;
+}
+/* 发标流程样式 - 发标进度条*/
+.markStepBox {
+	width: 90%;
+	height: 98px;
+	margin-top: 40px;
+}
+.markStep {
+	width: 98px;
+	height: 98px;
+	float: left;
+}
+.markStep>p {
+	display: block;
+	width: 98px;
+	font-size: 14px;
+	color: #888;
+	line-height: 30px;
+	text-align: center;
+	margin-top: -30px;
+	overflow: auto;
+}
+.stepPerBox {
+	z-index: 2;
+	position: relative;
+	width: 300px;
+	height: 25px;
+	margin: 37px -5px 0;
+	float: left;
+	background-color: #F0F0F0;
+}
+.stepPerBox .stepInfo {
+	position: relative;
+	width: 150px;
+	height: 24px;
+	opacity: 0;
+	font-size: 13px;
+	line-height: 24px;
+	text-align: center;
+	margin-top: -35px;
+	background-color: #F6F6F6;
+	border-radius: 5px;
+}
+.stepPerBox .stepInfo b {
+	color: #0292EF;
+}
+.stepPerBox .stepInfo span {
+	position: absolute;
+	top: 100%;
+	left: 50%;
+	margin-left: -7px;
+	border-left: 7px solid transparent;
+	border-right: 7px solid transparent;
+	border-top: 7px solid #F6F6F6;
+
+}
+.stepPerBox .stepPer {
+	width: 320px;
+	height: 10px;
+	margin-left: -10px;
+	margin-top: 19px;
+	opacity: 0;
+	background-color: #31B0FF;
+}
+/* 发标流程样式 - 标类别选择*/
+.markSelectBox {
+	width: 874px;
+	height: 380px;
+	padding-top: 30px;
+	background: url(../../Home/images/markSelectBottom.jpg) no-repeat scroll center bottom rgba(0, 0, 0, 0);
+}
+.markSelectScrollBox {
+	position: relative;
+	width: 710px;
+	height: 342px;
+	padding-left: 5px;
+	overflow: hidden;
+}
+.markSelectScrollBox ul {
+	display: block;
+	width: 1510px;
+	height: 342px;
+	margin-left: 0;
+}
+.markSelectScrollBox li {
+	display: inline-block;
+	position: relative;
+	width: 205px;
+	height: 340px;
+	margin-left: 0px;
+	margin-right: -85px;
+	float: left;
+	background-color: #FDFDFD;
+	border: 1px solid #DDD;
+}
+.markSelectShadow {
+	position: absolute;
+	top: 55px;
+	left: 206px;
+	width: 12px;
+	height: 329px;
+	font-size: 12px;
+	line-height: 1px;
+	background: url(../../home/images/markSelectShadow.png);
+}
+.markSelectTitle {
+	height: 50px;
+	font-size: 20px;
+	color: #555;
+	line-height: 50px;
+	padding-left: 15px;
+}
+.titleColor1 {
+	background-color: #FFE8AF;
+}
+.titleColor2 {
+	background-color: #FFAFB3;
+}
+.titleColor3 {
+	background-color: #E5F09D;
+}
+.titleColor4 {
+	background-color: #AFE4FF;
+}
+.titleColor5 {
+	background-color: #B9AFFF;
+}
+.markSelectInfo {
+	font-size: 12px;
+	color: #666;
+	line-height: 18px;
+	text-indent: 24px;
+	padding: 8px 12px 0px;
+}
+.markSelectInfoModel {
+	display: none;
+	position: absolute;
+	top: 0px;
+	left: 0px;
+	width: 205px;
+	height: 340px;
+	opacity: 0.2;
+	background-color: #FFF;
+}
+.markSelectBtn {
+	display: none;
+	position: absolute;
+	top: 3px;
+	left: 80px;
+	width: 117px;
+	height: 42px;
+	opacity: 0.6;
+	background-image: url(../../home/images/markSelectBtn.gif);
+}
+.markSelectScrollBox li:hover .markSelectBtn, .markSelectScrollBox li:hover .markSelectInfoModel {
+	display: block;
+}
+/* 投标详情页样式 */
+#markDetailPic {
+	display: block;
+	width: 170px;
+	height: 160px;
+	padding: 6px;
+	margin-top: 20px;
+	border: 1px solid #DDDDDD;
+	background-color: #FAFAFA;
+}
+#detailTenderBox {
+	width: 180px;
+	height: auto;
+	margin-top: 10px;
+	padding: 10px;
+	border: 1px solid #DDD;
+	border-radius: 3px;
+	background-color: #FAFAFA;
+}

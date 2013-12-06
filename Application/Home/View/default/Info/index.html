@@ -1,0 +1,20 @@
+<extend name="Base:common" />
+
+<block name="body">
+<div class="middle">
+	<!-- 左侧导航栏 -->
+	<include file="infoPageLeftAside" />
+	<!-- 右侧主要信息 -->
+	<div class="rightMainContent">
+		<div class="userInfoBox">
+			<div class="userInfoMain">
+				{$content[0][content]}
+			</div>
+		</div>
+	</div>
+</div>
+</block>
+
+<block name="script">
+<js file="__STATIC__/js/info.js" />
+</block>

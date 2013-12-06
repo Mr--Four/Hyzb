@@ -1,0 +1,40 @@
+<extend name="Base:common" />
+
+<block name="body">
+<div class="middle">
+	<!-- 左侧导航栏 -->
+	<include file="infoPageLeftAside" />
+
+	<!-- 右侧主要信息 -->
+	<div class="rightMainContent">
+		<div class="userInfoBox">
+			<article class="userInfoMain">
+				<p class="infoArticleTitle">{$data['title']}</p>
+				<p class="infoArticleTime">{$data['addtime']|date='Y-m-d H:i:s',###}</p>
+				{$data['content']}
+				<div class="jiaThisBox">
+					<!-- JiaThis Button BEGIN -->
+					<div class="jiathis_style_24x24">
+						<a class="jiathis_button_qzone"></a>
+						<a class="jiathis_button_tsina"></a>
+						<a class="jiathis_button_tqq"></a>
+						<a class="jiathis_button_weixin"></a>
+						<a class="jiathis_button_renren"></a>
+						<a href="http://www.jiathis.com/share" class="jiathis jiathis_txt jtico jtico_jiathis" target="_blank"></a>
+						<a class="jiathis_counter_style"></a>
+					</div>
+					<script type="text/javascript" src="http://v3.jiathis.com/code/jia.js" charset="utf-8"></script>
+					<!-- JiaThis Button END -->
+				</div>
+			</article>
+		</div>
+	</div>
+</div>
+</block>
+
+<block name="script">
+<script type="text/javascript">
+	var url = "{$Think.const.ACTION_NAME}"
+</script>
+<js file="__STATIC__/js/info.js" />
+</block>

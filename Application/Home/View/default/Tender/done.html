@@ -1,0 +1,55 @@
+<extend name="Base:common" />
+
+<block name="body">
+<div class="middle">
+	<div class="middleTitle">
+		<span class="middleTitleBox selectMiddleTitle" onclick="running();">
+			正在进行的项目
+		</span>
+		<span class="middleTitleBox">
+			已完成项目
+			<span class="titleTriangle"></span>
+			<span class="titleTriangleBorder"></span>
+		</span>
+	</div>
+	<!-- 标内容 -->
+	<ul class="markList">
+		<li>
+			<div class="markListPercent" style="width: 34%; opacity: 0.6;"></div>
+			<table class="tableMarkList">
+				<tbody>
+					<tr>
+						<td class="markListImg" rowspan="3"><img src="__IMG__/1.jpg"/></td>
+						<td colspan="3">
+							<a href="" class="markListName">**锋利投资公司短期资金周转</a>
+							<span class="iconMarkList needShowFullInfo" data-full="流转标">
+								<img src="__IMG__/iconFlowMark.gif" />
+							</span>
+							(奖励金额:2.3%)
+						</td>
+						<td width="100" rowspan="3"><input class="btnTenderList btnTenderFull" type="button" onclick="" /></td>
+					</tr>
+					<tr>
+						<td width="200">借款人 : kaixin</td>
+						<td width="220">借款金额 : <b>300,000 元</b></td>
+						<td width="170">年利率 : <b>22.0%</b></td>
+					</tr>
+					<tr>
+						<td>借款期限 : 1个月</td>
+						<td>借款进度 : <b><span class="markListPercentNum">34%</span></b></td>
+						<td>还款方式 : 一次性还款</td>
+					</tr>
+				</tbody>
+			</table>
+		</li>
+	</ul>
+</div>
+</block>
+
+<block name="script">
+<script type="text/javascript">
+function running () {
+	window.location.href = "{:U('Home/Invest/running')}"
+}
+</script>
+</block>

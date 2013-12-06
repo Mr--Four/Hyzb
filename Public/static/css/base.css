@@ -1,0 +1,649 @@
+﻿@charset 'utf-8';
+*{
+	margin:0 auto;
+	padding: 0;
+	font-family: 'Microsoft YaHei', '微软雅黑';
+}
+h1, h2, h3, h4, h5, h6, span, label, aside, section,button,input, textarea, ul, li, table, tbody, th, tr, td, tt, dl, dd, dt, form, a, img{
+	margin: 0px;
+	padding: 0px;
+}
+a:visited {
+	color: transparent;
+}
+ul, li {
+	list-style: none outside none;
+}
+img{
+	border:0;
+}
+input,textarea{
+	outline: 0;
+}
+body{
+	background-color:#edeff1;
+}
+fieldset {
+	border: 0 none;
+	margin: 0;
+	padding: 0;
+}
+/* 全局通用样式 */
+.middle {
+	position: relative;
+	width: 980px;
+	height: auto;
+	margin-top: 10px;
+	z-index: 3;
+}
+.whiteMiddle {
+	width: 978px;
+	height: auto;
+	padding-top: 10px;
+	padding-bottom: 30px;
+	background-color: #FFF;
+	border: 1px solid #EEE;
+}
+.top {
+	position: relative;
+	width: 100%;
+	height: 92px;
+	background-image: url(../images/topBg.png);
+}
+.leftFloatNav {
+	position: absolute;
+	top: 0px;
+	width: 223px;
+	height: auto;
+	padding-bottom: 40px;
+	background-color: #FFF;
+	border: 1px solid #DDD;
+}
+.leftFloatBox {
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 223px;
+	height: auto;
+	border: 1px solid #DDD;
+	background-color: #FFF;
+	padding-bottom: 40px;
+}
+.rightMainContent {
+	width: 728px;
+	height: auto;
+	min-height: 400px;
+	margin-left: 245px;
+	padding: 15px 0 30px;
+	border: 1px solid #DDD;
+	background-color: #FFF;
+}
+.bottom {
+	clear: both;
+	width: 920px;
+	height: auto;
+	padding-top: 10px;
+}
+.body {
+	position: relative;
+	width: 100%;
+	height: auto;
+}
+/* 导航和头部 */
+.topMain {
+	position: relative;
+	width: 980px;
+	height: 92px;
+	background-image: url(../images/topBg.png);
+	background-color: #edeff0;
+}
+.topContact {
+	z-index: 999;
+	float: right;
+	width: 104px;
+	height: 48px;
+	line-height: 22px;
+	margin-top: 18px;
+	padding: 3px 3px 0px 35px;
+	background-color: #f5f5f5;
+	background-image: url(../images/topContactIcon.jpg);
+	background-position: 5px 3px;
+	background-repeat: no-repeat;
+	border-radius: 4px;
+	color: #666;
+	font-size: 13px;
+}
+.nav {
+	list-style: none;
+	width: 604px;
+	height: 34px;
+	margin-top: 24px;
+	padding-right: 20px;
+	float: right;
+}
+.nav li {
+	display: block;
+	width: 98px;
+	height: 34px;
+	float: right;
+}
+.nav>li>span{
+	float:right;
+	width:1px;
+	height:34px;
+}
+.nav>li>a {
+	display: block;
+	width: 87px;
+	height: 34px;
+	line-height: 34px;
+	margin-left: 5px;
+	padding: 0px;
+	font-size: 16px;
+	color: #666;
+	text-align: center;
+	text-decoration: none;
+	border-right: 1px solid #e5e5e5;
+	border-radius: 4px;
+
+}
+.nav>li>a:hover, .nav>li>a:focus {
+	display: block;
+	width: 90px;
+	line-height: 30px;
+	margin-left: 5px;
+	font-size: 18px;
+	color: #09f;
+	background-color: #fff;
+	text-shadow: 0.1em 0.1em 0.2em #11ffff;
+}
+.nav .current {
+	position: relative;
+}
+.nav .current a {
+	color: #09f;
+}
+/* 登录后顶部账户详情样式*/
+.navUserLi {
+	position: relative;
+}
+.navUserLink:hover {
+	color: #666;
+	background: none repeat scroll 0 0 transparent;
+}
+#myAccountBox {
+	position: absolute;
+	top: 35px;
+	right: 4px;
+	z-index: 10;
+	width: 200px;
+	height: auto;
+	background-color: #FFF;
+	border: 1px solid #DDD;
+}
+.myAccountBoxWhiteLine {
+	position: absolute;
+	top: -1px;
+	right: 0px;
+	width: 87px;
+	height: 1px;
+	font-size: 1px;
+	line-height: 1px;
+	background-color: #FFF;
+}
+.accountBoxTop {
+	width: 100%;
+	height: auto;
+	overflow: auto;
+	border-bottom: 1px solid #DDD;
+}
+.accountBoxTop img {
+	width: 40px;
+	height: 40px;
+	padding: 8px;
+}
+.accountBoxTop img:hover {
+	opacity: 0.8;
+	filter: alpha(opacity=80);
+}
+.accountBoxTop p {
+	padding: 5px 8px;
+	font-size: 14px;
+	line-height: 20px;
+}
+.accountBoxTop p a {
+	font-size: 13px;
+	color: #09F;
+	text-decoration: none;
+}
+.accountBoxTop p a:hover {
+	color: #07F;
+}
+.accountBoxTop p span {
+	float: none;
+	color: #F60;
+	background: none;
+}
+.accountBoxBottom {
+	width: 100%;
+	overflow: auto;
+	padding: 5px 0;
+}
+.btnNavAccount {
+	float: left;
+	width: 40px;
+	height: 20px;
+	font-size: 13px;
+	color: #666;
+	line-height: 20px;
+	margin-left: 18px;
+	text-align: center;
+	text-decoration: none;
+	background-color: #F6F6F6;
+	border: 1px solid #DDD;
+}
+.btnNavAccount:hover {
+	color: #333;
+	border: 1px solid #CCC;
+}
+.btnNavRecharge {
+	color: #FFF;
+	background-color: #FFAE57;
+	border-color: #FF9320;
+}
+.btnNavRecharge:hover {
+	color: #FFF;
+	background-color: #FEA443;
+	border-color: #F27F03;
+}
+.navUserNoHover {
+	color: #666;
+	background: none;
+}
+/* 页面底部信息*/
+.bottomLine {
+	width: 100%;
+	height: 1px;
+	font-size: 1px;
+	line-height: 1px;
+	background-color: #DDD;
+	border: 1px solid #FFF;
+}
+.friendBox {
+	margin-top: 15px;
+	width: 868px;
+	height: 40px;
+	padding: 4px;
+	background-color: #e9e9e9;
+}
+.friendMain {
+	width: 868px;
+	height: 40px;
+	background: #FFF;
+}
+.friendList {
+	width: 710px;
+	float: right;
+	padding-right: 20px;
+}
+.friendList li {
+	float: left;
+	margin-right: 6px;
+}
+.friendList li a {
+	display: inline-block;
+	padding: 0 5px;
+	color: #666;
+	font-size: 14px;
+	height: 40px;
+	line-height: 40px;
+	text-align: center;
+	text-decoration: none;
+}
+.friendList li a:hover {
+	color: #333;
+	background-color: #F8F8F8;
+}
+.bottomInfo {
+	padding: 10px 0;
+	font-size: 13px;
+	line-height: 28px;
+	color: #888;
+	text-align: center;
+}
+.bottomInfo a, .bottoma:visited {
+	display: inline-block;
+	height: 28px;
+	line-height: 28px;
+	color: #666;
+	text-decoration: none;
+}
+.bottomInfo a:hover {
+	color: #09F;
+}
+
+/* 页面登录和注册模块 */
+.loginRegMiddle {
+	position: relative;
+	width: 980px;
+	height: 420px;
+	margin-top: 30px;
+}
+.loginRegLogo >img {
+	position: absolute;
+	top: 60px;
+	display: block;
+}
+.loginRegMain {
+	position: relative;
+	position: absolute;
+	top: 0;
+	right: 0;
+	width: 500px;
+	height: auto;
+}
+.loginRegBox {
+	display: block;
+	width: 360px;
+	height: auto;
+	margin-right: 30px;
+	padding-bottom: 20px;
+	background-color: #FFF;
+	border: 1px solid #DDD;
+	opacity: 1;
+}
+.loginRegTitle {
+	position: relative;
+	width: 100%;
+	height: 40px;
+	line-height: 40px;
+	margin-top: 15px;
+	margin-left: -5px;
+	padding: 0 5px;
+	color: #FFF;
+	background-color: #0292EF;
+
+}
+.loginRegTitleLeftTriangle {
+	border-color: rgba(0, 0, 0, 0) #257FC7 #257FC7 rgba(0, 0, 0, 0);
+	border-style: dashed solid solid dashed;
+	border-width: 2px;
+	font-size: 1px;
+	height: 0;
+	line-height: 1px;
+	position: absolute;
+	left: 0;
+	top: -4px;
+}
+.loginRegTitleRightTriangle {
+	border-color: rgba(0, 0, 0, 0) rgba(0, 0, 0, 0) #257FC7 #257FC7;
+	border-style: dashed dashed solid solid;
+	border-width: 2px;
+	font-size: 1px;
+	height: 0;
+	line-height: 1px;
+	position: absolute;
+	top: -4px;
+	right: 0;
+}
+.loginRegTitle p {
+	padding-left: 15px;
+	font-size: 16px;
+	color: #FFF;
+}
+.loginRegTitle a, .loginRegTitle a:visited {
+	display: inline-block;
+	float: right;
+	width: 66px;
+	height: 40px;
+	line-height: 40px;
+	font-size: 14px;
+	color: #FD0;
+	text-decoration: none;
+}
+.loginRegTitle a:hover {
+	color: #FE0;
+}
+
+.loginRegTable {
+	width: 98%;
+	margin-top: 15px;
+	margin-left: 30px;
+}
+.loginRegTable tr td {
+	height: 36px;
+	line-height: 36px;
+	color: #555;
+	font-size: 14px;
+}
+.loginRegTable tr td:nth-child(1) {
+	text-align: right;
+	width: 100px;
+}
+.loginRegTable tr td:nth-child(2) {
+	width: 160px;
+}
+.loginRegTable tr td:nth-child(3)>p {
+	width: 175px;
+	margin-left: 5px;
+}
+.pageTextInput {
+	width: 180px;
+	height: 26px;
+	margin-left: 5px;
+	padding-left: 5px;
+	border: 1px solid #CCC;
+}
+.pageVerifyInput {
+	font-size: 18px;
+	float: left;
+	width: 48px;
+	height: 30px;
+	line-height: 18px;
+	margin-left: 5px;
+	padding-left: 5px;
+	border: 1px solid #CCC;
+}
+.verifyImg {
+	width: 120px;
+	height: 30px;
+	line-height: 30px;
+	margin-left: 5px;
+	cursor: pointer;
+}
+.verifyBox {
+	height: 36px;
+	padding-top: 5px;
+}
+.loginError {
+	width: 62%;
+	height: 16px;
+	line-height: 16px;
+	font-size: 12px;
+	color: #F20;
+	border: 1px solid #FFC286;
+	background-color: #FFFBD8;
+	padding: 8px 10px;
+	margin-left: 50px;
+	text-align: left;
+}
+.loginBtn {
+	display: block;
+	padding: 8px 20px;
+	font-size: 14px;
+	color: #FFF;
+	border: none;
+	border-radius: 1px;
+	cursor: pointer;
+	float: right;
+}
+.pageLoginForget {
+	margin-left: 25px;
+	font-size: 12px;
+	color: #F60;
+	text-decoration: none;
+}
+.pageLoginForget:hover {
+	text-decoration: underline;
+}
+/* 注册信息提示，报错样式 */
+.formPromptInfo {
+	font-size: 12px;
+	color: #008000;
+	text-indent: 10px;
+}
+.formErrorInfo {
+	font-size: 12px;
+	color: #F10;
+	background: url("../images/onerror.gif") no-repeat left 8px;
+	text-indent: 24px;
+	padding-top: 1px;
+}
+.formSuccessInfo {
+	font-size: 12px;
+	color: #008000;
+	background: url('../images/onsuccess.gif') no-repeat left 8px;
+}
+.formInput {
+	border-color: #377BCB;
+}
+.formErrorInput {
+	border-color: #F10;
+}
+/* 咨询服务 - 左侧导航栏 */
+.navList {
+	width: 180px;
+	height: auto;
+	margin: 0 auto;
+	margin-top: 20px;
+
+}
+.navList li {
+	width: 100%;
+	height: 40px;
+	line-height: 40px;
+	border-bottom: 1px solid #DDD;
+}
+.navList li a {
+	display: block;
+	width: 152px;
+	height: 40px;
+	font-size: 16px;
+	color: #666;
+	padding-left: 20px;
+	text-decoration: none;
+	border-left: 9px solid #FFF;
+}
+.navList li a:hover {
+	color: #2FA3FF;
+}
+.navList .active a{
+	color: #2FA3FF;
+	border-left: 9px solid #2FA3FF;
+	background-color: #FFF;
+}
+/* 咨询服务页面样式 */
+.userInfoBox {
+	width: 90%;
+	height: auto;
+	font-size: 13px;
+	color: #666;
+	margin-top: 20px;
+	padding: 10px;
+	background-color: #FFF;
+	border: 1px solid #FAFAFA;
+	border-radius: 3px;
+}
+.userInfoMain {
+	width: 95%;
+	height: auto;
+	line-height: 20px;
+	margin-top: 10px;
+	padding-bottom: 20px;
+}
+.userInfoMain img {
+	max-width: 600px;
+}
+.userInfoMain>h1,h2,h3,h4,h5,h6 {
+	margin: 6px 0 ;
+}
+.userInfoMain .orange {
+	color: #F60;
+	font-weight: bold;
+}
+/* 公告列表样式 */
+.noticeList {
+	width: 93%;
+	height: auto;
+	padding: 10px;
+	font-size: 12px;
+	line-height: 26px;
+	color: #800006;
+	background-color: #FFF;
+	margin-top: 20px;
+}
+.noticeList li {
+	list-style-type: disc;
+	list-style-position: inside;
+	padding-left: 5px;
+	border-bottom: 1px dashed #CCC;
+}
+.noticeList li:hover {
+	background-color: #FAFAFA;
+}
+.noticeList li span {
+	float: right;
+	color: #CCC;
+}
+.noticeList li a {
+	font-size: 13px;
+	color: #666;
+	text-decoration: none;
+}
+.noticeList li a:hover {
+	color: #800006;
+}
+/* 公告和动态的文章样式*/
+.infoArticleTitle {
+	font-size: 18px;
+	color: #800006;
+	line-height: 35px;
+	text-align: center;
+}
+.infoArticleTime {
+	font-size: 12px;
+	line-height: 30px;
+	color: #999;
+	margin-bottom: 20px;
+	text-align: center;
+	border-bottom: 1px dashed #CCC;
+}
+/* JIA快捷分享插件 */
+.jiaThisBox {
+	width: 100%;
+	height: auto;
+	margin: 10px 0;
+	padding: 10px 0;
+	border-top: 1px dashed #CCC;
+}
+
+/* btn背景样式(渐变) */
+.btn {
+	border: none;
+	background: #5ABBF6; /* Old Browsers */
+	background: -moz-linear-gradient(top, #5ABBF6, #339BDB); /* FF3.6+ */
+	background: -webkit-gradient(linear, left top, left bottom, color-start(0%, #5ABBF6), color-stop(100%, #339BDB));   /* Chrome,Safari4+ */
+	background: -o-linear-gradient(top, #5abbf6,#339bdb); /* Opera11.10+ */
+	background: -ms-linear-gradient(top, #5abbf6,#339bdb); /* IE10+ */
+	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#5abbf6', endColorstr='#339bdb',GradientType=0 ); /* IE6-9 */
+	background: linear-gradient(top, #5abbf6,#339bdb); /* W3C */
+}
+.btn:hover, .btn:focus {
+	background: #5ABBF6; /* Old Browsers */
+	background: -moz-linear-gradient(top, #77C5F7, #339BDB); /* FF3.6+ */
+	background: -webkit-gradient(linear, left top, left bottom, color-start(0%, #77C5F7), color-stop(100%, #339BDB));   /* Chrome,Safari4+ */
+	background: -o-linear-gradient(top, #77C5F7,#339bdb); /* Opera11.10+ */
+	background: -ms-linear-gradient(top, #77C5F7,#339bdb); /* IE10+ */
+	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#77C5F7', endColorstr='#339bdb',GradientType=0 ); /* IE6-9 */
+	background: linear-gradient(top, #77C5F7,#339bdb); /* W3C */
+}

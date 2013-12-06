@@ -1,0 +1,26 @@
+<extend name="Base:common" />
+
+<block name="body">
+<div class="middle">
+	<!-- 左侧导航栏 -->
+	<include file="infoPageLeftAside" />
+	<!-- 右侧主要信息 -->
+	<div class="rightMainContent">
+		<ul class="noticeList">
+			<foreach name="list" item="v">
+			<li>
+				<span>{$v.addtime|date='Y-m-d  H:i:s',###}</span>
+				<a href="{$map}&id={$v.id}">{$v.title}</a>
+			</li>
+			</foreach>
+		</ul>
+	</div>
+</div>
+</block>
+
+<block name="script">
+<script type="text/javascript">
+	var url = "{$Think.const.ACTION_NAME}"
+</script>
+<js file="__STATIC__/js/info.js" />
+</block>

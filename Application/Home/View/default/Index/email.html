@@ -1,0 +1,29 @@
+<extend name="Base:common" />
+
+<block name="body">
+<div class="middle">
+	<form action="{:U('Home/Index/email')}" method="post">
+		<table>
+			<tr>
+				<td>收件人:</td>
+				<td><input type="text" name="to"></td>
+			</tr>
+			<tr>
+				<td>收件人名称 :</td>
+				<td><input type="text" name="name"/></td>
+			</tr>
+			<tr>
+				<td>主题 :</td>
+				<td><input type="text" name="subject" /></td>
+			</tr>
+			<tr>
+				<td>正文 :</td>
+				<td><textarea name="content"></textarea></td>
+			</tr>
+			<tr>
+				<td colspan="2"><input type="submit" value="提交"/></td>
+			</tr>
+		</table>
+	</form>
+</div>
+</block>

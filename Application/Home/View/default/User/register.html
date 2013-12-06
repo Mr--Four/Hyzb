@@ -1,0 +1,66 @@
+<extend name="Base:common" />
+
+<block name="body">
+<div class="loginRegMiddle">
+  <div class="loginRegLogo">
+    <img src="__IMG__/loginLogo.jpg" >
+  </div>
+  <div class="loginRegMain">
+    <div class="loginRegBox" style="width:98%">
+      <div class="loginRegTitle">
+        <span class="loginRegTitleLeftTriangle"></span>
+        <a href="{:U('Home/User/login')}">立即登录</a>
+        <p>新用户注册</p>
+        <span class="loginRegTitleRightTriangle"></span>
+      </div>
+
+      <form action="{:U('Home/User/register', '', '')}" method="post">
+        <table class="loginRegTable">
+          <tr>
+            <td>用 户 名:</td>
+            <td><input type="text" name="username" class="pageTextInput" /></td>
+            <td><p id="userInfo" class="formPromptInfo" >* 不能使用特殊字符</p></td>
+          </tr>
+          <tr>
+            <td>密　　码:</td>
+            <td><input type="password" name="password" class="pageTextInput" /></td>
+            <td><p id="passInfo" class="formPromptInfo">* 长度不小于6位</p></td>
+          </tr>
+          <tr>
+            <td>确认密码:</td>
+            <td><input type="password" name="repassword" class="pageTextInput" /></td>
+            <td><p id="repassInfo" class="formPromptInfo">* 请确认密码</p></td>
+          </tr>
+          <tr>
+            <td>电子邮箱:</td>
+            <td><input type="text" name="email" class="pageTextInput" /></td>
+            <td><p id="emailInfo" class="formPromptInfo" >* 用于激活账户</p></td>
+          </tr>
+          <tr>
+            <td>验 证 码:</td>
+            <td class="verifyBox">
+                <img id="reloadVerify" class="verifyImg" src="{:U('Home/User/verify')}" />
+                <input type="text" name="verify" class="pageVerifyInput" maxlength="4"/>
+            </td>
+            <td><p id="verifyInfo" class="formPromptInfo">* 请输入验证码</p></td>
+          </tr>
+          <tr hidden="hidden">
+            <td colspan="3"><p class="loginRegError" style="width:224px;margin-left:12px"></p></td>
+          </tr>
+          <tr>
+            <td colspan="2" align="right"><button type="submit" class="btn loginBtn" />注册</button></td>
+            <td></td>
+          </tr>
+        </table>
+      </form>
+    </div>
+  </div>
+</div>
+</block>
+
+<block name="script">
+<script type="text/javascript">
+  var url = "{:U('Home/User/check')}"
+</script>
+<js file="__JS__/register.js" />
+</block>

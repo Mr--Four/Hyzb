@@ -1,0 +1,60 @@
+<extend name="Base:common" />
+
+<block name="body">
+<div class="middle">
+	<div class="whiteMiddle">
+		<!-- 发表进度指示部分 -->
+		<div class="markStepBox">
+			<div class="markStep">
+				<p>选择标种</p>
+				<img src="__IMG__/creditStepOne.jpg" name="步骤1"/>
+			</div>
+			<div class="stepPerBox">
+				<div class="stepInfo">
+					<span></span>
+					已成功选择 :
+					<b>流转标</b>
+				</div>
+				<div class="stepPer">
+				</div>
+			</div>
+			<div class="markStep">
+				<p>填写标信息</p>
+				<img src="__IMG__/creditStepTwo.jpg" name="步骤2"/>
+			</div>
+			<div class="stepPerBox">
+				<div class="stepInfo">
+					<div class="stepInfo">
+						<span></span>
+						已成功填写标信息
+						<b></b>
+					</div>
+				</div>
+				<div class="stepPer">
+				</div>
+			</div>
+			<div class="markStep">
+				<p>完成发标</p>
+				<img src="__IMG__/creditStepThree.jpg" name="步骤3"/>
+			</div>
+		</div>
+			<div class="markSelectBox">
+		<div class="markSelectScrollBox">
+			<ul>
+				<volist name="list" id="v">
+				<li>
+					<p class="markSelectTitle titleColor{$i}">{$v.show_name}</p>
+					<p class="markSelectInfo">
+						{:get_biao_content($v['content'])}
+					</p>
+					<div class="markSelectShadow"></div>
+					<div class="markSelectInfoModel"></div>
+					<a class="markSelectBtn" href=""></a>
+				</li>
+				</volist>
+			</ul>
+		</div>
+	</div>
+	</div>
+</div>
+</block>

@@ -1,0 +1,30 @@
+<extend name="Base:common" />
+
+<block name="body">
+<div class="middle">
+	<div class="leftFloatBox">
+		<img id="markDetailPic" src="__IMG__/crop_detail.jpg" />
+		<div id="detailTEnderBox">
+			<div id="detailTenderMain">
+				<form id="detailTenderForm" method="post" action="">
+					<input type="hidden" value="1" name="borrow_id" />
+					<input id="minuFlowCopies" class="btnFlowAmountConsole" type="button" value="-" />
+					<input id="flowCopiesInput" type="text" name="amount" value="1" />
+					<input id="addFlowCopies" class="btnFlowAmountConsole" type="button" value="+" />
+					<input id="detailTenderBtn" class="btnTenderList btnDetailTender" type="button" value="">
+				</form>
+			</div>
+			<p>当前可用金额:０元</p>
+			<p>每份金额限制100元</p>
+		</div>
+		<ul id="detailMenu">
+			<li class="active"><a href="javascript:;">投资记录</a></li>
+			<li><a href="javascript:;">借款信息</a></li>
+		</ul>
+	</div>
+
+	<div class="rightMainContent">
+
+	</div>
+</div>
+</block>

@@ -1,0 +1,147 @@
+<extend name="Base/common" />
+
+<block name="style">
+<css file="__STATIC__/css/index.css" />
+</block>
+
+<block name="carousel">
+<!-- 轮播图部分 -->
+<div id="bannerLogin" class="carousel">
+	<!-- 轮播图片 -->
+	<ul class="inner">
+		<li><img src="__IMG__/bannerImg.jpg"></li>
+		<li><img src="__IMG__/bannerImg_1.jpg"></li>
+		<li><img src="__IMG__/bannerImg_2.jpg"></li>
+		<li><img src="__IMG__/bannerImg_3.jpg"></li>
+		<!-- <li><img src="__IMG__/bannerImg_4.jpg"></li> -->
+	</ul>
+
+	<!-- 登陆模块 -->
+	<!-- <div class="loginBox"> -->
+	{:is_login() ? "<div class='indexLoginBox' style='display: none'> ": "<div class='indexLoginBox'>"}
+		<div class="loginBlack"></div>
+		<div class="loginMain">
+			<p class="loginBoxTitle">用户登录</p>
+			<form id="indexLoginForm" action="{:U('Home/User/login', '', '')}" method="post">
+				<table class="loginTable" width="186" align="center">
+					<tr>
+						<td colspan="2">
+							<label>
+								<input type="text" name="username" class="textInput"/>
+								<span>用户名</span>
+							</label>
+						</td>
+					</tr>
+					<tr>
+						<td colspan="2">
+							<label>
+								<input type="password" name="password" class="textInput" />
+								<span>密码</span>
+							</label>
+						</td>
+					</tr>
+					<tr>
+						<td>
+							<label class="labelCheckBox">
+								<input type="checkbox" name="remember" />
+								记住用户名
+							</label>
+						</td>
+						<td align="right">
+							<a href="" class="indexLoginForget">忘记密码?</a>
+						</td>
+					</tr>
+					<tr>
+						<td>
+							<button type="submit" class="btn btnSub" id="login">登录</button>
+						</td>
+						<td>
+							<button type="button" class="btn btnSub" onclick="window.location.href='{:U('Home/User/register')}';">注册</button>
+						</td>
+					</tr>
+				</table>
+			</form>
+		</div>
+	</div>
+</div>
+</block>
+
+<block name="body">
+<!-- 首页中间部分 -->
+<div class="middle">
+	<!-- 标区域 -->
+	<div class="left">
+		<div class="middleTitle">
+			<a href="{:U('Home/Invest/running')}" class="more">查看更多>></a>
+			<span class="middleTitleBox">
+				投标项目
+				<span class="titleTriangle"></span>
+				<span class="titleTriangleBorder"></span>
+			</span>
+		</div>
+		<ul class="markList" id="indexMarkList">
+			<li>
+				<div class="markListPercent" style="width: 34%; opacity: 0.6;"></div>
+				<table class="tableMarkList">
+					<tbody>
+						<tr>
+							<td class="markListImg" rowspan="3"><img src="__IMG__/1.jpg"/></td>
+							<td colspan="3">
+								<a href="" class="markListName">**锋利投资公司短期资金周转</a>
+								<span class="iconMarkList needShowFullInfo" data-full="流转标">
+									<img src="__IMG__/iconFlowMark.gif" />
+								</span>
+								(奖励金额:2.3%)
+							</td>
+							<td width="100" rowspan="3"><input class="btnTenderList btnTenderFull" type="button" onclick="" /></td>
+						</tr>
+						<tr>
+							<td width="200">借款人 : kaixin</td>
+							<td width="220">借款金额 : <b>300,000 元</b></td>
+							<td width="170">年利率 : <b>22.0%</b></td>
+						</tr>
+						<tr>
+							<td>借款期限 : 1个月</td>
+							<td>借款进度 : <b><span class="markListPercentNum">34%</span></b></td>
+							<td>还款方式 : 一次性还款</td>
+						</tr>
+					</tbody>
+				</table>
+			</li>
+		</ul>
+	</div>
+	<!-- 右侧栏 - 网站公告-->
+	<div class="right">
+		<div class="middleTitle">
+			<a href="{:U('Home/Info/notice')}" class="more">查看更多>></a>
+			<span class="middleTitleBox">
+				网站公告
+				<span class="titleTriangle"></span>
+				<span class="titleTriangleBorder"></span>
+			</span>
+		</div>
+		<ul class="rightInfoList">
+			<foreach name="notice" item="n">
+				<li><a href="{:U('Home/Info/notice', array('id' => $n['id']))}">{$n.title}</a></li>
+			</foreach>
+		</ul>
+		<div class="middleTitle">
+			<a href="{:U('Home/Info/trend')}" class="more">查看更多>></a>
+			<span class="middleTitleBox">
+				网站动态
+				<span class="titleTriangle"></span>
+				<span class="titleTriangleBorder"></span>
+			</span>
+		</div>
+		<ul class="rightInfoList">
+			<foreach name="trend" item="t">
+				<li><a href="{:U('Home/Info/trend', array('id' => $t['id']))}">{$t.title}</a></li>
+			</foreach>
+		</ul>
+	</div>
+</div>
+</block>
+
+<block name="script">
+	<js file="__STATIC__/js/index.js" />
+</block>
